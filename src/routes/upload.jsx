@@ -4,7 +4,9 @@ import { FileUploader } from '../components/FileUploader';
 
 export function Upload() {
     return (
-        <div style={{ width: '100vw', height: '100vh', backgroundImage: `url(${PIC})`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', backgroundPosition: 'center', backgroundSize: 'cover' }}>
+        <div style={{
+            width: '100vw', height: '100vh', backgroundColor: '#000', backgroundImage: `url(${PIC})`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', backgroundPosition: 'center', backgroundSize: 'cover'
+        }}>
             <div style={{ flex: 2 }}></div>
             <div style={{ fontSize: 14, flex: 2, width: '40%' }}>
                 <div style={{

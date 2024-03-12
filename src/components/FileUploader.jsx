@@ -1,9 +1,29 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./style.css";
 import { toast } from "react-toastify";
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+
+
+
+
+
+
 export const FileUploader = () => {
+
     const [startUpload, setStartUpload] = useState(false);
+    const [modal, setModal] = useState(false);
     const hiddenFileInput = useRef(null);
+
+    const [captcha, setCaptcha] = useState('');
+
+
+    useEffect(() => {
+        loadCaptchaEnginge(6);
+    }, []);
+
+
+
+
     const handleClick = (event) => {
         hiddenFileInput.current.click();
     };
@@ -18,15 +38,44 @@ export const FileUploader = () => {
             toast.error("The size of the uploaded file must be 10 MB maximum");
             return;
         }
-        toast.success(file_size);
         setStartUpload(true)
-        setStartUpload(false)
+        setModal(true);
+
 
         const fileUploaded = event.target.files[0];
         //handleFile(fileUploaded);
     };
+
+    const checkCaptcha = () => {
+        if (validateCaptcha(captcha)) {
+            setStartUpload(false);
+            setModal(false);
+            toast.success("Upload file successfully");
+        } else {
+            toast.error("Captcha Does Not Match");
+        }
+    }
+
     return (
         <>
+            {
+
+                <div className={`modal ${modal && ' show'}`}>
+                    <div className="box-in-modal">
+                        <div>
+                            <p className="po">To continue, please enter the text of the photo.</p>
+                            <LoadCanvasTemplate reloadColor="red" />
+                            <div className="pp">
+                                <input className="input-captcha" value={captcha} type="text" onChange={(e) => setCaptcha(e.target.value)} />
+                                <button onClick={() => checkCaptcha()}>Submit</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+
             <button disabled={startUpload} className="button-upload" onClick={handleClick}>
                 {
                     startUpload ? 'Uploading ...' : 'Upload a file'
