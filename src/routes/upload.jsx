@@ -5,16 +5,15 @@ import { FileUploader } from '../components/FileUploader';
 export function Upload() {
     return (
         <div style={{
-            width: '100vw', height: '100vh', backgroundColor: '#000', backgroundImage: `url(${PIC})`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', backgroundPosition: 'center', backgroundSize: 'cover'
+            width: '100vw', height: '100vh', backgroundColor: '#000', backgroundImage: `url(${PIC})`, backgroundPosition: 'center', backgroundSize: 'cover', position: 'relative'
         }}>
-            <div style={{ flex: 2 }}></div>
-            <div style={{ fontSize: 14, flex: 2, width: '40%' }}>
+            <div className='ofd'>
                 <div style={{
                     display: 'flex',
                     alignItems: 'center',
                     flexDirection: 'column'
                 }}>
-                    <div style={{ flex: 2, minHeight: 300 }}>
+                    <div className='iol'>
                         <TypeIt
                             options={{
                                 speed: 50,
@@ -45,7 +44,7 @@ export function Upload() {
                     </div>
                 </div>
             </div>
-            <div style={{ flex: 1 }}></div>
+
         </div >
     )
 }
