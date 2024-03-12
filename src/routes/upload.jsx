@@ -1,5 +1,4 @@
-import PIC from '../assets/p2.jpg'
-import { Link } from "react-router-dom";
+import PIC from '../assets/QQpage2-back.jpg'
 import TypeIt from "typeit-react";
 import { FileUploader } from '../components/FileUploader';
 

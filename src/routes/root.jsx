@@ -1,4 +1,4 @@
-import PIC from '../assets/p1.jpg'
+import PIC from '../assets/p1-front.jpg'
 import { Link } from "react-router-dom";
 export function Root() {
     return (
