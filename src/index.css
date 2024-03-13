@@ -80,16 +80,6 @@ button:focus-visible {
   height: 100vh;
 }
 
-@media only screen and (min-width: 1200px) {
-  .title-home {
-    font-size: 1.8rem;
-  }
-
-  .toz {
-    background-image: url('./QQpage2-back.jpg');
-  }
-}
-
 
 @media (prefers-color-scheme: light) {
   :root {
