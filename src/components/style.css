@@ -16,8 +16,11 @@
     /* Make the button easy for touchscreen users to tap */
     min-height: 30px;
     min-width: 48px;
-    padding: 0.1em 1.2em;
-    margin-top: 9px;
+    padding: 0 1.2em;
+    margin-top: 6px;
+    outline: none;
+    background: transparent;
+    color: white;
 }
 
 .button-upload:focus {
@@ -98,7 +101,9 @@
         font-size: 13px;
         height: 35vh;
         padding: 10px;
+        line-height: 1.9;
     }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -107,7 +112,8 @@
     }
 
     .toz {
-        background-image: url('../new-pic.jpg');
+        /* background-image: url('../new-pic.jpg'); */
+        background-image: url('../upload-bg.jpg');
     }
 
     .iol {
@@ -117,14 +123,14 @@
         width: 725px;
         font-size: 12px;
         margin-top: 0;
-        line-height: 2;
+        line-height: 1.75;
         color: white;
         flex: 3;
         /* background-origin: content-box; */
     }
 
     .md {
-        padding: 50px;
+        padding: 25px;
     }
 }
 
@@ -135,6 +141,6 @@
     }
 
     .button-upload {
-        margin-top: 30px;
+        margin-top: 5px;
     }
 }

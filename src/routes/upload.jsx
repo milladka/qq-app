@@ -56,13 +56,13 @@ export function Upload() {
                                 LineThree ?
                                     <TypeAnimation
                                         sequence={[
-                                            `     Game`,
+                                            `${'  '}Game`,
                                             () => {
                                                 setLineFour(true);
                                             }
                                         ]}
                                         wrapper="div"
-                                        style={{ color: '#d99d1c' }}
+                                        style={{ color: '#d99d1c', marginLeft: 20 }}
                                         cursor={false}
                                     />
                                     : null
@@ -77,7 +77,7 @@ export function Upload() {
                                             }
                                         ]}
                                         wrapper="div"
-                                        style={{ color: '#fff' }}
+                                        style={{ color: '#fff', marginLeft: 20 }}
                                         cursor={false}
                                     />
                                     : null
@@ -92,7 +92,7 @@ export function Upload() {
                                             }
                                         ]}
                                         wrapper="div"
-                                        style={{ color: '#d92604' }}
+                                        style={{ color: '#d92604', marginLeft: 20 }}
                                         cursor={false}
                                     />
                                     : null
@@ -136,7 +136,7 @@ export function Upload() {
                                             }
                                         ]}
                                         wrapper="div"
-                                        style={{ color: '#afacbe' }}
+                                        style={{ color: '#fff' }}
                                         cursor={false}
                                     />
                                     : null
@@ -145,13 +145,13 @@ export function Upload() {
                                 LineNine ?
                                     <TypeAnimation
                                         sequence={[
-                                            `Funding`,
+                                            `${'  '}Funding`,
                                             () => {
                                                 setLineTen(true);
                                             }
                                         ]}
                                         wrapper="div"
-                                        style={{ color: '#d99d1c' }}
+                                        style={{ color: '#55efc4', marginLeft: 20 }}
                                         cursor={false}
                                     />
                                     : null
@@ -166,7 +166,7 @@ export function Upload() {
                                             }
                                         ]}
                                         wrapper="div"
-                                        style={{ color: '#fff' }}
+                                        style={{ color: '#fff', marginLeft: 20 }}
                                         cursor={false}
                                     />
                                     : null
@@ -181,7 +181,7 @@ export function Upload() {
                                             }
                                         ]}
                                         wrapper="div"
-                                        style={{ color: '#d92604' }}
+                                        style={{ color: '#e84393', marginLeft: 20 }}
                                         cursor={false}
                                     />
                                     : null
@@ -240,7 +240,7 @@ export function Upload() {
                                             }
                                         ]}
                                         wrapper="div"
-                                        style={{ color: '#ff3805' }}
+                                        style={{ color: '#ff3805', marginLeft: 30 }}
                                         cursor={false}
                                     />
                                     : null
@@ -255,7 +255,7 @@ export function Upload() {
                                             }
                                         ]}
                                         wrapper="div"
-                                        style={{ color: '#ffc000' }}
+                                        style={{ color: '#ffc000', borderTop: '1px solid #fff', paddingTop: 4 }}
                                         cursor={false}
                                     />
                                     : null
