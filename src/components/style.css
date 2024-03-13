@@ -109,7 +109,7 @@
        background-image: url('./QQpage2-back.jpg'); 
     } */
     .iol {
-        background-image: url('./monitor.png');
+        background-image: url('../monitor.png');
         background-size: cover;
         background-repeat: no-repeat;
         width: 850px;
