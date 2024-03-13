@@ -1,18 +1,11 @@
-import PIC from '../assets/QQpage2-back.jpg'
 import TypeIt from "typeit-react";
 import { FileUploader } from '../components/FileUploader';
 
 export function Upload() {
     return (
-        <div style={{
-            width: '100vw', height: '100vh', backgroundColor: '#000', backgroundImage: `url(${PIC})`, backgroundPosition: 'center', backgroundSize: 'cover', position: 'relative'
-        }}>
+        <div className={'toz'}>
             <div className='ofd'>
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    flexDirection: 'column'
-                }}>
+                <div className="smil">
                     <div className='iol'>
                         <TypeIt
                             options={{
@@ -24,7 +17,7 @@ export function Upload() {
                                     "&nbsp;&nbsp;&nbsp;AI,",
                                     "&nbsp;&nbsp;&nbsp;Metaverse",
                                     "}",
-                                    "We've created a supportive cycle to advance innovative projects worldwide. Our services include, but aren't limited to:",
+                                    "We've established a supportive ecosystem to propel projects worldwide, offering services including, but not limited to:",
                                     "{",
                                     "&nbsp;&nbsp;&nbsp;Funding,",
                                     "&nbsp;&nbsp;&nbsp;Development,",
@@ -39,7 +32,7 @@ export function Upload() {
                             }}
                         />
                     </div>
-                    <div style={{ flex: 1 }}>
+                    <div className="holder-btn">
                         <FileUploader />
                     </div>
                 </div>
