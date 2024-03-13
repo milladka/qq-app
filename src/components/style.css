@@ -14,8 +14,10 @@
     /* Match font style with the parent element */
     font: inherit;
     /* Make the button easy for touchscreen users to tap */
-    min-height: 48px;
+    min-height: 30px;
     min-width: 48px;
+    padding: 0.1em 1.2em;
+    margin-top: 9px;
 }
 
 .button-upload:focus {
@@ -80,6 +82,12 @@
     flex: 1;
 }
 
+.kjn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 @media only screen and (min-width: 500px) and (max-width: 1199px) {}
@@ -89,7 +97,7 @@
         width: 36vw;
         font-size: 13px;
         height: 35vh;
-        padding: 65px;
+        padding: 10px;
     }
 }
 
@@ -98,20 +106,21 @@
         font-size: 1.8rem;
     }
 
-    /* .toz {
-       background-image: url('./QQpage2-back.jpg'); 
-    } */
+    .toz {
+        background-image: url('./new-pic.jpg');
+    }
+
     .iol {
-        background-image: url('../monitor.png');
+        /* background-image: url('../monitor.png');
         background-size: cover;
-        background-repeat: no-repeat;
-        width: 850px;
+        background-repeat: no-repeat; */
+        width: 725px;
         font-size: 12px;
         margin-top: 0;
         line-height: 2;
         color: white;
         flex: 3;
-        background-origin: content-box;
+        /* background-origin: content-box; */
     }
 
     .md {
@@ -120,10 +129,12 @@
 }
 
 
-/* @media only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1441px) {
     .iol {
-        width: 40vw;
-        font-size: 13px;
-        height: 35vh;
+        margin-top: 20px;
     }
-} */
+
+    .button-upload {
+        margin-top: 30px;
+    }
+}

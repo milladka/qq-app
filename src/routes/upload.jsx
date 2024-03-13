@@ -260,6 +260,12 @@ export function Upload() {
                                     />
                                     : null
                             }
+                            {
+                                Line17 &&
+                                <div className='kjn'>
+                                    <FileUploader />
+                                </div>
+                            }
 
 
 
@@ -268,9 +274,7 @@ export function Upload() {
 
                     </div>
                     <div className="holder-btn">
-                        {
-                            Line17 && <FileUploader />
-                        }
+
                     </div>
                 </div>
             </div>
