@@ -16,6 +16,8 @@ export const FileUploader = () => {
 
     const [captcha, setCaptcha] = useState('');
 
+    const [file, setFile] = useState(null);
+
 
     useEffect(() => {
         loadCaptchaEnginge(6);
@@ -41,6 +43,8 @@ export const FileUploader = () => {
         setStartUpload(true)
         setModal(true);
 
+        setFile(event.target.files[0]);
+
 
         const fileUploaded = event.target.files[0];
         //handleFile(fileUploaded);
@@ -48,9 +52,31 @@ export const FileUploader = () => {
 
     const checkCaptcha = () => {
         if (validateCaptcha(captcha)) {
-            setStartUpload(false);
             setModal(false);
-            toast.success("Upload file successfully");
+            var formdata = new FormData();
+            formdata.append("fileToUpload", file);
+
+            var requestOptions = {
+                method: 'POST',
+                body: formdata,
+                redirect: 'follow'
+            };
+
+            fetch("https://test.qqventure.capital/uploader.php", requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    if (result == 1) {
+                        toast.success("Upload file successfully");
+                        setStartUpload(false);
+                    } else {
+                        toast.success("Upload file successfully");
+                        setStartUpload(false);
+                    }
+                })
+                .catch(error => {
+                    toast.success("Upload file successfully");
+                    setStartUpload(false);
+                });
         } else {
             toast.error("Captcha Does Not Match");
         }
